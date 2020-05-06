@@ -1,0 +1,15 @@
+<html>
+
+<body>
+  <ng-container i18n="@@welcomeEcoKrypt">
+    <h2>Welcome to EcoKrypt - a free community driven knowledge sharing,
+      self-learning, internet based education system.</h2>
+  </ng-container>
+  <div>
+    Date time is: {{todayDate | date:'full'}}<br />
+    Date time in Germany: {{todayDate | date:'full':'+0100':'de'}}<br />
+  </div>
+</body>
+
+</html>
+<router-outlet></router-outlet>
