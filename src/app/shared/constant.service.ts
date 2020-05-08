@@ -1,12 +1,12 @@
 import { Injectable, Inject } from '@angular/core';
-import { APP_BASE_HREF } from '@angular/common';
+import { APP_BASE_HREF, DOCUMENT } from '@angular/common';
 import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConstantService {
-  constructor(@Inject(APP_BASE_HREF) public baseHref: string) {}
+  constructor(@Inject(APP_BASE_HREF) public baseHref: string, @Inject(DOCUMENT) private document: Document) {}
 
   // alert and toast messages
   public MESSAGE_DISPLAY_TYPE_ALERT = 'alert';
@@ -43,5 +43,8 @@ export class ConstantService {
 
   removeFirstAndLastSlash(tobeConvertedString: string): string {
     return tobeConvertedString.replace(/^\/|\/$/g, '');
+  }
+  redirectToExternalUrl(url: string): void {
+    this.document.location.href = url;
   }
 }

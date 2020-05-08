@@ -14,5 +14,15 @@
         <a class="nav-link" href="#">Users</a>
       </li>
     </ul>
+    <ul class="nav navbar-nav ml-auto">
+      <select id="selectlang" (change)="onChangeLang()" [(ngModel)]="selectedLangUrl">
+        <option *ngFor="let language of languageList" value={{language.url}}>
+          {{language.label}}</option>
+      </select>
+      <br />
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/user/register']">Register</a>
+      </li>
+    </ul>
   </div>
 </nav>

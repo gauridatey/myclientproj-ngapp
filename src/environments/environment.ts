@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  WEBSERVICE_URL: 'http://localhost:3000/api'
+  WEBSERVICE_URL: 'http://localhost:3000/api',
+  LANG_EN_URL: 'http://localhost:4200',
+  LANG_FR_URL: 'http://localhost:4201/fr',
+  LANG_MR_URL: 'http://localhost:4202/mr'
 };
 
 /*
