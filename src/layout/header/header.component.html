@@ -15,8 +15,8 @@
       </li>
     </ul>
     <ul class="nav navbar-nav ml-auto">
-      <select id="selectlang" (change)="onChangeLang()" [(ngModel)]="selectedLangUrl">
-        <option *ngFor="let language of languageList" value={{language.url}}>
+      <select id="selectlang" (ngModelChange)="onChangeLang($event)" [(ngModel)]="selectedLang">
+        <option *ngFor="let language of languageList" [ngValue]="language">
           {{language.label}}</option>
       </select>
       <br />
