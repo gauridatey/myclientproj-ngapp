@@ -1,3 +1,4 @@
+import { MiscModule } from './../misc/misc.module';
 import { LayoutModule } from './../layout/layout.module';
 import { HealthCheckModule } from './health-check/health-check.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +19,9 @@ registerLocaleData(localeDe, 'de');
     SharedModule,
     HomeModule,
     LayoutModule,
-    AppRoutingModule // must be imported as the last module as it contains the fallback route
+    MiscModule,
+    // AppRoutingModule must be last as it contains the fallback route
+    AppRoutingModule
   ],
   providers: [
     {
